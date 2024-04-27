@@ -34,5 +34,8 @@
 		"youtube",
 		"music",
 		"api"
-	]
+	],
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	  }
 }
