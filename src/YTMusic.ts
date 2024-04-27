@@ -370,10 +370,7 @@ export default class YTMusic {
 		const lyricsData = await this.constructRequest("browse", { browseId })
 		const lyrics = traverseString(lyricsData, "description", "runs", "text")
 
-		return lyrics
-			? lyrics
-					.split("\r\n")
-			: null
+		return lyrics ? lyrics.replaceAll("\r", "").split("\n") : null
 	}
 
 	/**
